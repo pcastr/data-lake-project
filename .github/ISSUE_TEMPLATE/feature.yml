@@ -9,7 +9,7 @@ body:
     attributes:
       label: 🎯 Objetivo da Feature
       description: Explique o que será entregue com essa funcionalidade.
-      placeholder: Exemplo: Criar estrutura de zonas no Data Lake (raw, processed, trusted)
+      placeholder: Criar estrutura de zonas no Data Lake (raw, processed, trusted)
     validations:
       required: true
 
@@ -29,7 +29,7 @@ body:
     id: estimativa
     attributes:
       label: 📈 Estimativa de esforço (Story Points)
-      placeholder: Ex: 5
+      placeholder: 5
     validations:
       required: false
 
