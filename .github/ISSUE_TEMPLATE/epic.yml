@@ -8,7 +8,7 @@ body:
     attributes:
       label: Objetivo da Epic
       description: Descreva o objetivo geral dessa Epic e o que será entregue.
-      placeholder: Exemplo: Definir a arquitetura do Data Lake.
+      placeholder: Definir a arquitetura do Data Lake.
   - type: textarea
     id: features
     attributes:
