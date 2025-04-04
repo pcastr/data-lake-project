@@ -9,7 +9,7 @@ body:
     attributes:
       label: Objetivo da Feature
       description: O que será entregue com essa feature?
-      placeholder: Exemplo: Criar estrutura de zonas no Data Lake (raw, processed, trusted)
+      placeholder: Criar estrutura de zonas no Data Lake (raw, processed, trusted)
   - type: textarea
     id: tarefas
     attributes:

@@ -9,7 +9,7 @@ body:
     attributes:
       label: Descrição da Tarefa
       description: O que precisa ser feito?
-      placeholder: Exemplo: Escrever documentação explicando cada zona do Data Lake.
+      placeholder: Escrever documentação explicando cada zona do Data Lake.
   - type: checkboxes
     id: checklist
     attributes:
