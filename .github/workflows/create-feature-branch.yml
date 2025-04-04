@@ -8,6 +8,8 @@ jobs:
   create-feature-branch:
     if: contains(github.event.issue.labels.*.name, 'feature')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Permite criação de branches
 
     steps:
       - name: Checar se a checkbox está marcada
@@ -17,20 +19,23 @@ jobs:
           echo "Corpo da issue:"
           echo "$body"
 
-          # Verifica se o checkbox está marcado
           if echo "$body" | grep -q '\[x\] Criar branch automaticamente para a feature'; then
-            echo "create_branch=true" >> $GITHUB_OUTPUT
+            echo "create_branch=true" >> $GITHUB_ENV
           else
-            echo "create_branch=false" >> $GITHUB_OUTPUT
+            echo "create_branch=false" >> $GITHUB_ENV
           fi
 
-      - name: Clonar repositório
-        if: steps.check.outputs.create_branch == 'true'
+      - name: Configurar acesso ao repositório
+        if: env.create_branch == 'true'
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
+          git config --global url."https://${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
 
-          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} repo
+      - name: Criar branch
+        if: env.create_branch == 'true'
+        run: |
+          git clone https://github.com/${{ github.repository }} repo
           cd repo
 
           issue_number=${{ github.event.issue.number }}
