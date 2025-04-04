@@ -1,5 +1,5 @@
 name: Tarefa
-description: Template padrão para tarefas do projeto
+description: Template padrão para tarefas executáveis do projeto
 title: "[Tarefa] "
 labels: ["tarefa"]
 body:
@@ -7,17 +7,17 @@ body:
     id: descricao
     attributes:
       label: Descrição da Tarefa
-      placeholder: O que precisa ser feito?
+      description: O que precisa ser feito?
+      placeholder: Exemplo: Escrever documentação explicando cada zona do Data Lake.
   - type: checkboxes
     id: checklist
     attributes:
       label: Checklist
       options:
-        - label: Criar branch a partir dessa issue
-        - label: Escrever código/script
-        - label: Testar localmente
-        - label: Abrir Pull Request
-        - label: Adicionar documentação (se necessário)
+        - label: Escrever código ou documentação
+        - label: Testar localmente (se aplicável)
+        - label: Atualizar README ou docs (se necessário)
+        - label: Abrir Pull Request (se aplicável)
   - type: input
     id: estimativa
     attributes:

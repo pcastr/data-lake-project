@@ -1,0 +1,39 @@
+name: Feature
+description: Template para criação de novas funcionalidades (Features)
+title: "[Feature] "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo da Feature
+      description: O que será entregue com essa feature?
+      placeholder: Exemplo: Criar estrutura de zonas no Data Lake (raw, processed, trusted)
+  - type: textarea
+    id: tarefas
+    attributes:
+      label: Subtarefas ou etapas
+      description: Liste as tasks necessárias para concluir essa feature.
+      placeholder: |
+        - [ ] Escrever documentação
+        - [ ] Criar diretórios
+        - [ ] Validar estrutura
+  - type: input
+    id: estimativa
+    attributes:
+      label: Estimativa de Esforço (Story Points)
+  - type: dropdown
+    id: prioridade
+    attributes:
+      label: Prioridade
+      options:
+        - Alta
+        - Média
+        - Baixa
+  - type: checkboxes
+    id: branch
+    attributes:
+      label: Ações iniciais
+      options:
+        - label: Criar branch a partir dessa feature
+

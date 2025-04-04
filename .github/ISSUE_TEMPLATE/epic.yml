@@ -1,0 +1,32 @@
+name: Epic
+description: Issue para organizar um grupo de funcionalidades ou tarefas relacionadas
+title: "[EPIC] "
+labels: ["epic"]
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo da Epic
+      description: Descreva o objetivo geral dessa Epic e o que será entregue.
+      placeholder: Exemplo: Definir a arquitetura do Data Lake.
+  - type: textarea
+    id: features
+    attributes:
+      label: Features relacionadas
+      description: Liste as funcionalidades que fazem parte dessa Epic (linkar issues, se possível).
+      placeholder: |
+        - [ ] #10 - [Feature] Estrutura de zonas
+        - [ ] #11 - [Feature] Ingestão de dados
+  - type: input
+    id: estimativa
+    attributes:
+      label: Estimativa geral de esforço (Story Points)
+  - type: dropdown
+    id: prioridade
+    attributes:
+      label: Prioridade da Epic
+      options:
+        - Alta
+        - Média
+        - Baixa
+
