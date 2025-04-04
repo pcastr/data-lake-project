@@ -3,6 +3,7 @@ description: Template para criação de uma nova funcionalidade do sistema
 title: "[Feature] "
 labels: ["feature"]
 projects: ["seu-usuario/seu-projeto"] # substitua aqui, se desejar vincular a um GitHub Project automaticamente
+
 body:
   - type: textarea
     id: objetivo
@@ -37,10 +38,12 @@ body:
     id: prioridade
     attributes:
       label: 🔥 Prioridade
+      description: Nível de urgência dessa Feature
       options:
         - Alta
         - Média
         - Baixa
+      placeholder: Selecione a prioridade
     validations:
       required: false
 
