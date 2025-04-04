@@ -1,0 +1,25 @@
+name: Tarefa
+description: Template padrão para tarefas do projeto
+title: "[Tarefa] "
+labels: ["tarefa"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição da Tarefa
+      placeholder: O que precisa ser feito?
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: Criar branch a partir dessa issue
+        - label: Escrever código/script
+        - label: Testar localmente
+        - label: Abrir Pull Request
+        - label: Adicionar documentação (se necessário)
+  - type: input
+    id: estimativa
+    attributes:
+      label: Estimativa de Esforço (Story Points)
+
