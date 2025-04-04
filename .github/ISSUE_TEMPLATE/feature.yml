@@ -2,7 +2,7 @@ name: Feature
 description: Template para criação de uma nova funcionalidade do sistema
 title: "[Feature] "
 labels: ["feature"]
-projects: ["seu-usuario/seu-projeto"] # substitua aqui, se desejar vincular a um GitHub Project automaticamente
+projects: ["seu-usuario/seu-projeto"] # substitua aqui, se quiser vincular direto a um project
 
 body:
   - type: textarea
@@ -30,7 +30,7 @@ body:
     id: estimativa
     attributes:
       label: 📈 Estimativa de esforço (Story Points)
-      placeholder: 5
+      placeholder: "5"  # Corrigido com string
     validations:
       required: false
 
@@ -43,7 +43,6 @@ body:
         - Alta
         - Média
         - Baixa
-      placeholder: Selecione a prioridade
     validations:
       required: false
 
